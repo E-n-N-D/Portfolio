@@ -1,0 +1,89 @@
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+/* Main projects — always 3 equal columns filling full available width */
+.projects-grid-main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.proj-card {
+  min-width: 320px;
+  background: var(--white); border: 0.5px solid var(--dim); border-radius: 12px;
+  overflow: hidden; display: flex; flex-direction: column;
+  transition: border-color .2s, transform .2s;
+}
+.proj-card:hover { border-color: #c0c0c0; transform: translateY(-3px); }
+
+.proj-media {
+  width: 100%; aspect-ratio: 16/9;
+  background: var(--bg); border-bottom: 0.5px solid var(--dim);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden; flex-shrink: 0;
+}
+.proj-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.proj-media::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background-image: linear-gradient(var(--line) 1px, transparent 1px),
+                    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+.proj-media-placeholder { position: relative; display: flex; flex-direction: column; align-items: center; gap: .5rem; }
+.proj-media-placeholder svg  { width: 22px; height: 22px; stroke: var(--dim); fill: none; stroke-width: 1.25; stroke-linecap: round; stroke-linejoin: round; }
+.proj-media-placeholder span { font-size: 9px; color: var(--dim); font-weight: 300; letter-spacing: .08em; }
+
+.proj-body  { padding: 1rem 1.25rem 1.25rem; display: flex; flex-direction: column; gap: .5rem; flex: 1; }
+.proj-name  { font-family: var(--serif); font-size: 1.05rem; color: var(--text); font-weight: 400; }
+.proj-desc  { font-size: 12px; color: var(--text-secondary); line-height: 1.7; font-weight: 300; flex: 1; }
+.proj-stack { display: flex; flex-wrap: wrap; gap: 5px; margin-top: .25rem; }
+
+/* Live / Code link buttons */
+.proj-links {
+  display: flex;
+  gap: .5rem;
+  margin-top: .6rem;
+}
+.proj-link {
+  display: inline-flex; align-items: center; gap: .35rem;
+  font-size: 10px; font-weight: 400; font-family: var(--sans);
+  letter-spacing: .04em; text-decoration: none;
+  padding: 4px 10px; border-radius: 4px;
+  border: 0.5px solid var(--dim); color: var(--muted);
+  background: var(--white); transition: all .18s; cursor: pointer;
+}
+.proj-link:hover { color: var(--text); border-color: #aaa; }
+.proj-link svg { width: 11px; height: 11px; stroke: currentColor; fill: none; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+.proj-link.proj-link-live  { background: var(--text); color: var(--white); border-color: var(--text); }
+.proj-link.proj-link-live:hover { background: #2a2a2a; }
+
+/* ── EXPLORE MORE ── */
+.projects-grid-more {
+  margin-top: 1.25rem;
+  animation: gridFadeIn .4s var(--ease) both;
+}
+@keyframes gridFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.explore-btn-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.75rem;
+}
+.explore-btn {
+  display: inline-flex; align-items: center; gap: .45rem;
+  font-size: 12px; font-weight: 400; font-family: var(--sans);
+  letter-spacing: .04em; cursor: pointer;
+  padding: 9px 20px; border-radius: 6px;
+  border: 0.5px solid var(--dim); color: var(--muted);
+  background: var(--white); transition: all .2s;
+}
+.explore-btn:hover { color: var(--text); border-color: #aaa; }
+.explore-btn svg {
+  width: 13px; height: 13px; stroke: currentColor; fill: none;
+  stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0;
+}

@@ -1,0 +1,57 @@
+/* ── CONTENT WRAPPER ── */
+.content-wrapper {
+  display: grid;
+  grid-template-columns: var(--left-w) 1fr;
+}
+
+/* ── STICKY LEFT PANEL ── */
+.sticky-left {
+  position: sticky;
+  top: var(--nav);
+  height: calc(100vh - var(--nav));
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 2.5rem 2.5rem 2.5rem var(--h);
+  border-right: 0.5px solid var(--line);
+  background: var(--bg);
+  overflow: hidden;
+  z-index: 10;
+}
+
+/* Progress bar track on left edge */
+.sticky-left::before,
+.sticky-left::after {
+  content: ''; position: absolute; left: 0; width: 2px;
+}
+.sticky-left::before { top: 0; bottom: 0; background: var(--dim); }
+.sticky-left::after  { top: 0; height: var(--progress, 0%); background: var(--text); transition: height .15s linear; }
+
+/* Decorative large section number */
+.left-num {
+  font-family: var(--serif); font-style: italic;
+  font-size: 7rem; color: #b0b0b0;
+  line-height: 1; margin-bottom: -.5rem;
+  user-select: none; pointer-events: none;
+}
+
+/* Animated heading block */
+.left-content { display: flex; flex-direction: column; }
+.left-content.exit  { animation: lcExit  .22s var(--ease) forwards; }
+.left-content.enter { animation: lcEnter .38s var(--ease) forwards; }
+
+@keyframes lcExit  { to   { opacity: 0; transform: translateY(-14px); } }
+@keyframes lcEnter {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── SCROLLABLE RIGHT ── */
+.scrollable-right { display: flex; flex-direction: column; }
+
+.right-section {
+  min-height: 100vh;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 4rem 3rem 4rem 3.5rem;
+}
+.right-section.bg-white    { background: var(--white); }
+.right-section.bg-gray     { background: var(--bg); }
+.right-section.bg-projects { background: var(--bg-projects); }

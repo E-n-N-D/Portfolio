@@ -1,0 +1,39 @@
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+/* Full-width web-dev card */
+.exp-card-wide {
+  grid-column: 1 / -1;
+  /* background: var(--bg);  */
+  border: 0.5px solid var(--dim); border-radius: 12px;
+  padding: 1.75rem;
+}
+.exp-wide-header {
+  display: flex; align-items: flex-start;
+  /* justify-content: space-between; */
+  gap: 4rem; margin-bottom: 1.5rem; padding-bottom: 1.25rem;
+  border-bottom: 0.5px solid var(--line);
+}
+.exp-wide-header-left { display: flex; align-items: flex-start; gap: 1rem; }
+.exp-wide-desc { font-size: 12px; color: var(--muted); font-weight: 300; line-height: 1.7; max-width: 360px; flex-shrink: 0; }
+
+/* Three sub-columns */
+.exp-sub-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+.exp-sub-col  { padding: 0 1.5rem; border-right: 0.5px solid var(--line); }
+.exp-sub-col:first-child { padding-left: 0; }
+.exp-sub-col:last-child  { padding-right: 0; border-right: none; }
+.exp-sub-label { font-size: 10px; letter-spacing: .1em; color: var(--muted); font-weight: 400; margin-bottom: .85rem; text-transform: uppercase; }
+
+/* Smaller expertise cards */
+.exp-card { background: var(--white); border: 0.5px solid var(--dim); border-radius: 12px; padding: 1.5rem; }
+.exp-icon {
+  width: 34px; height: 34px; background: var(--bg);
+  border: 0.5px solid var(--dim); border-radius: 8px;
+  display: flex; align-items: center; justify-content: center; margin-bottom: 1.1rem;
+}
+.exp-icon svg { width: 16px; height: 16px; stroke: var(--muted); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.exp-name { font-family: var(--serif); font-size: 1.1rem; color: var(--text); margin-bottom: .5rem; font-weight: 400; }
+.exp-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.75; font-weight: 300; margin-bottom: 1rem; }

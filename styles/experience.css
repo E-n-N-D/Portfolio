@@ -1,0 +1,97 @@
+/* ── TIMELINE SPINE ── */
+.timeline { position: relative; padding-left: 2.25rem; max-width: 680px; width: 100%; }
+.timeline::before {
+  content: ''; position: absolute; left: 0; top: 12px; bottom: 0; width: 0.5px;
+  background: linear-gradient(to bottom, var(--dim), transparent);
+}
+
+/* ── TIMELINE CARD ── */
+.tl-item {
+  position: relative; margin-bottom: 1rem;
+  background: var(--white); border: 0.5px solid var(--dim); border-radius: 10px;
+  cursor: pointer; overflow: hidden;
+  transition: border-color .2s, box-shadow .25s, background .25s, transform .25s var(--ease);
+}
+.tl-item:hover { border-color: #c0c0c0; }
+
+/* Spine dot */
+.tl-item::before {
+  content: ''; position: absolute;
+  left: calc(-2.25rem - 3px); top: 1.2rem;
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--white); border: 1.5px solid var(--dim);
+  transition: background .2s, border-color .2s;
+}
+
+/* Card header */
+.tl-header { display: flex; align-items: center; justify-content: space-between; padding: 1.1rem 1.25rem; user-select: none; }
+.tl-date   { font-size: 11px; color: var(--text-tertiary); font-weight: 400; letter-spacing: .04em; margin-bottom: .3rem; }
+.tl-role   { font-family: var(--serif); font-size: 1.1rem; color: var(--text); margin-bottom: .15rem; font-weight: 400; }
+.tl-org    { font-size: 12px; color: var(--text-secondary); font-weight: 300; }
+
+/* Chevron — shown only in mobile/tablet via responsive overrides */
+.tl-chevron    { width: 18px; height: 18px; flex-shrink: 0; margin-left: 1rem; color: var(--dim); transition: transform .35s var(--ease), color .2s; }
+.tl-item.open .tl-chevron { transform: rotate(180deg); color: var(--muted); }
+.tl-chevron-sm { display: none; }
+
+/* Accordion body — shown only in mobile/tablet */
+.tl-body    { max-height: 0; overflow: hidden; transition: max-height .4s var(--ease); }
+.tl-body-sm { display: none; }
+.tl-body-inner { padding: .85rem 1.25rem 1.1rem; border-top: 0.5px solid var(--line); }
+
+/* Bullet list */
+.tl-bullets { list-style: none; display: flex; flex-direction: column; gap: .5rem; }
+.tl-bullets li {
+  font-size: 12px; color: var(--muted); font-weight: 300; line-height: 1.65;
+  display: flex; gap: .6rem; align-items: flex-start;
+}
+.tl-bullets li::before { content: '—'; color: var(--dim); flex-shrink: 0; font-size: 11px; margin-top: 1px; }
+
+/* ── TWO-PANEL LAYOUT (desktop) ── */
+.exp-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  width: 100%;
+  align-items: start;
+}
+.exp-list { display: flex; flex-direction: column; }
+
+/* Inactive cards slightly dimmed on desktop */
+.exp-list .tl-item       { opacity: 0.8; }
+.exp-list .tl-item:hover { opacity: 0.95; }
+
+/* ── SELECTED / ACTIVE CARD ── */
+.tl-item.tl-selected {
+  opacity: 1;
+  background: var(--text); border-color: var(--text);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+  transform: translateX(4px);
+}
+.tl-item.tl-selected::before { background: var(--white); border-color: var(--white); }
+.tl-item.tl-selected::after  {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+  width: 3px; background: rgba(255,255,255,0.5); border-radius: 10px 0 0 10px;
+}
+.tl-item.tl-selected .tl-date { color: rgba(255,255,255,0.6); }
+.tl-item.tl-selected .tl-role { color: var(--white); font-size: 1.15rem; }
+.tl-item.tl-selected .tl-org  { color: rgba(255,255,255,0.65); }
+
+/* ── DETAIL PANEL ── */
+.exp-detail { position: sticky; top: calc(var(--nav) + 2rem); }
+.exp-detail-inner {
+  background: var(--white); border: 1px solid #c8c8c8; border-radius: 12px;
+  padding: 2rem; box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  position: relative; overflow: hidden;
+}
+.exp-detail-inner::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 3px; background: var(--text); border-radius: 12px 12px 0 0;
+}
+.exp-detail-role    { font-family: var(--serif); font-size: 1.55rem; color: var(--text); font-weight: 400; margin-bottom: .4rem; line-height: 1.15; }
+.exp-detail-org     { font-size: 13px; color: var(--text-secondary); font-weight: 400; margin-bottom: .2rem; }
+.exp-detail-date    { font-size: 11px; color: var(--text-tertiary); font-weight: 400; letter-spacing: .05em; text-transform: uppercase; }
+.exp-detail-divider { height: 0.5px; background: var(--dim); margin: 1.25rem 0; }
+.exp-detail-bullets { gap: .75rem; }
+.exp-detail-bullets li             { font-size: 13px; line-height: 1.75; color: #444; }
+.exp-detail-bullets li::before     { color: #aaa; }

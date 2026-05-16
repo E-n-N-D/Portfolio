@@ -1,0 +1,40 @@
+#contact {
+  background: var(--bg);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  position: relative;
+}
+.contact-card {
+  background: var(--white); border: 0.5px solid var(--dim); border-radius: 16px;
+  padding: 3rem 3.5rem; width: min(520px, 90vw); text-align: center;
+}
+.contact-card .sec-title { margin-bottom: .75rem; }
+.contact-sub { font-size: 13px; color: var(--muted); font-weight: 300; line-height: 1.7; margin-bottom: 2rem; }
+
+.cf { display: flex; flex-direction: column; gap: .75rem; }
+.cf input,
+.cf textarea {
+  width: 100%; padding: 10px 14px; font-family: var(--sans);
+  font-size: 13px; font-weight: 300; color: var(--text);
+  background: var(--bg); border: 0.5px solid var(--dim); border-radius: 6px;
+  outline: none; transition: border-color .2s; resize: none;
+}
+.cf input::placeholder,
+.cf textarea::placeholder { color: var(--muted); }
+.cf input:focus,
+.cf textarea:focus { border-color: #aaa; background: var(--white); }
+.cf textarea { height: 96px; }
+.cf button {
+  padding: 11px; background: var(--text); color: var(--white);
+  border: none; border-radius: 6px; font-family: var(--sans);
+  font-size: 13px; font-weight: 400; cursor: pointer; letter-spacing: .02em;
+  transition: background .2s;
+}
+.cf button:hover { background: #2a2a2a; }
+
+/* ── FOOTER ── */
+footer {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 48px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 var(--h); border-top: 0.5px solid var(--line);
+}
+footer span { font-size: 11px; color: var(--muted); font-weight: 300; letter-spacing: .03em; }
