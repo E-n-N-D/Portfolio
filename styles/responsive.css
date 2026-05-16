@@ -2,17 +2,17 @@
    LARGE SCREEN ≥ 1400px
    ═══════════════════════════════════════════════════════════════════════════ */
 @media (min-width: 1400px) {
-  :root { --h: 8rem; --left-w: 340px; }
+  :root { --h: 8rem; --left-w: 380px; }
 }
 @media (min-width: 1800px) {
-  :root { --h: 9rem; --left-w: 360px; }
+  :root { --h: 9rem; --left-w: 400px; }
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
    TABLET 641px–1024px
    ═══════════════════════════════════════════════════════════════════════════ */
 @media (max-width: 1024px) and (min-width: 641px) {
-  :root { --h: 2.5rem; --left-w: 240px; }
+  :root { --h: 2.5rem; --left-w: 320px; }
 
   .right-section { padding: 3rem 2rem 3rem 2.5rem; }
 
