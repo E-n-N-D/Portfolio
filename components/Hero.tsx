@@ -34,7 +34,7 @@ export default function Hero() {
         <div className="photo-card reveal from-right d3">
 
           <div className="photo-inner">
-            <img src="./profile.png" alt={"Sushant"} />
+            <img src="./profile.webp" alt={"Sushant"} />
           </div>
         </div>
       </div>
