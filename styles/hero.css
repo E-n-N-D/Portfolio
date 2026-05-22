@@ -23,20 +23,31 @@
 .btn.primary       { background: var(--text); color: var(--white); border-color: var(--text); }
 .btn.primary:hover { background: #2a2a2a; }
 
-.photo-wrap { display: flex; justify-content: center; align-items: center; }
-.photo-card {
-  width: min(300px, 40vw); aspect-ratio: 3/4;
-  background: var(--white); border: 0.5px solid var(--dim); border-radius: 14px;
-  display: flex; align-items: center; justify-content: center;
-  position: relative; overflow: hidden;
+.photo-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.photo-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, #f8f8f8, var(--white)); }
-.photo-inner        { position: relative; display: flex; flex-direction: column; align-items: center; gap: .6rem; }
-.photo-inner svg    { width: 44px; height: 44px; stroke: var(--dim); fill: none; stroke-width: 0.75; }
-.photo-inner span   { font-size: 11px; font-weight: 300; color: var(--muted); }
-.photo-card::after {
-  content: ''; position: absolute; bottom: 12px; right: 12px;
-  width: 28px; height: 28px;
-  border-bottom: 1px solid var(--dim); border-right: 1px solid var(--dim);
-  border-radius: 0 0 4px 0;
+
+.photo-card {
+  width: min(450px, 40vw);
+  aspect-ratio: 3/4;
+  background: var(--white);
+  border: 0.5px solid var(--dim);
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+.photo-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.photo-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }

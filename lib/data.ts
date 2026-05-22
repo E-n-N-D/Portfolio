@@ -146,6 +146,7 @@ export const projects: ProjectItem[] = [
   {
     name: 'RP Creator Group | Brand Website',
     desc: 'A service-based referral platform that connects users with verified professionals across multiple industries such as migration, legal, and real estate.',
+    image: "./projects/rpCreatorGroup.png",
     demo: "https://rpcreatorgroup.com.au",
     tags: [
       { label: 'React',      icon: d('react/react-original.svg') },
@@ -158,6 +159,7 @@ export const projects: ProjectItem[] = [
   {
     name: '2feat | Affiliate Marketing Website',
     desc: 'A website promoting sneakers and clothing of different brands, showing trending news about brands, easy visualization of whole apparel through sliders',
+    image: "./projects/2feat.png",
     demo: "https://2feat.com",
     tags: [
       { label: 'React',   icon: d('react/react-original.svg') },
@@ -170,6 +172,7 @@ export const projects: ProjectItem[] = [
   {
     name: 'Aveksha | Digital healthcare application',
     desc: 'A mobile application focusing on digitalizing the process of booking an appointment with healthcare professionals and organizing medical reports.',
+    image: "./projects/aveksha.png",
     github: "https://github.com/Niroula533/Aveksha",
     tags: [
       { label: 'Flutter',  icon: d('flutter/flutter-original.svg') },
@@ -185,6 +188,7 @@ export const moreProjects: ProjectItem[] = [
   {
     name: 'Pharma App',
     desc: 'A comprehensive web-based solution for managing medical inventory, tracking stock levels, and monitoring medicine expiry dates.',
+    image: "./projects/pharmaApp.png",
     github:"https://github.com/E-n-N-D/pharma-app",
     tags: [
       { label: 'React',   icon: d('react/react-original.svg') },
@@ -197,26 +201,28 @@ export const moreProjects: ProjectItem[] = [
   {
     name: 'UTPRO Cleaning Services',
     desc: 'A business website for a cleaning service provider offering residential, commercial, and specialized cleaning solutions with online booking and service inquiries.',
+    image: "./projects/utPro.png",
     demo: "https://utprocleaningservices.com.au",
     tags: [
       { label: 'Flutter',  icon: d('flutter/flutter-original.svg') },
       { label: 'Firebase', icon: d('firebase/firebase-original.svg') },
     ],
   },
-  {
-    name: 'Insighter',
-    desc: 'A learning management system for schools with added gamification elements',
-    github:"https://github.com/E-n-N-D/Insighter",
-    tags: [
-      { label: 'Flutter',  icon: d('flutter/flutter-original.svg') },
-      { label: 'Firebase', icon: d('firebase/firebase-original.svg') },
-      { label: 'Node.js', icon: d('nodejs/nodejs-original.svg') },
-      { label: 'Express',  icon: d('express/express-original.svg') },
-      { label: 'MongoDB',    icon: d('mongodb/mongodb-original.svg') },
-    ],
-  },
+  // {
+  //   name: 'Insighter',
+  //   desc: 'A learning management system for schools with added gamification elements',
+  //   github:"https://github.com/E-n-N-D/Insighter",
+  //   tags: [
+  //     { label: 'Flutter',  icon: d('flutter/flutter-original.svg') },
+  //     { label: 'Firebase', icon: d('firebase/firebase-original.svg') },
+  //     { label: 'Node.js', icon: d('nodejs/nodejs-original.svg') },
+  //     { label: 'Express',  icon: d('express/express-original.svg') },
+  //     { label: 'MongoDB',    icon: d('mongodb/mongodb-original.svg') },
+  //   ],
+  // },
   {
     name: 'Chature AI',
+    image: "./projects/chatureAI.png",
     desc: 'Context-aware question answering system integrated with MOODLE. Built during Bachelor\'s at Kathmandu University.',
     tags: [
       { label: 'Python',     icon: d('python/python-original.svg') },
@@ -227,6 +233,7 @@ export const moreProjects: ProjectItem[] = [
   {
     name: 'FoodFinder',
     desc: 'A website with Restaurants listed in it with their menus and their speciality where foodies can search and scroll through the menus and plan their next meal',
+    image: "./projects/foodFinder.png",
     github:"https://github.com/ayush7aryal/Food-Finder",
     tags: [
       { label: 'React',   icon: d('react/react-original.svg') },
@@ -239,6 +246,7 @@ export const moreProjects: ProjectItem[] = [
   {
     name: 'Recipe Masters',
     desc: 'Social platform for sharing recipes and managing them.',
+    image: "./projects/recipeMasters.png",
     demo:"https://www.figma.com/design/nPrQAewzmvGNCudRuHRf4b/Recipe-Masters?node-id=0-1&t=TKHNqn8iBU8sVhn7-1",
     tags: [
       { label: 'Figma',    icon: d('figma/figma-original.svg') },

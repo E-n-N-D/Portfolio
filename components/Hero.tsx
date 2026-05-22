@@ -32,12 +32,9 @@ export default function Hero() {
 
       <div className="photo-wrap">
         <div className="photo-card reveal from-right d3">
+
           <div className="photo-inner">
-            <svg viewBox="0 0 24 24">
-              <circle cx="12" cy="8" r="4" />
-              <path d="M4 20c0-4.4 3.58-8 8-8s8 3.6 8 8" />
-            </svg>
-            <span>Your photo here</span>
+            <img src="./profile.png" alt={"Sushant"} />
           </div>
         </div>
       </div>
