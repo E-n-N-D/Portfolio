@@ -4,18 +4,51 @@ import { useState } from 'react'
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
-  const [status, setStatus] = useState<'idle' | 'sending' | 'sent'>('idle')
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
+  const [errorMessage, setErrorMessage] = useState('')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    if (status !== 'idle') {
+      setStatus('idle')
+      setErrorMessage('')
+    }
+
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = async () => {
-    if (!form.name || !form.email || !form.message) return
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+
+    if (!form.name || !form.email || !form.message) {
+      setStatus('error')
+      setErrorMessage('Please fill in all fields before sending.')
+      return
+    }
+
     setStatus('sending')
-    // Replace this with your real API call / EmailJS / Resend etc.
-    await new Promise((r) => setTimeout(r, 800))
-    setStatus('sent')
+    setErrorMessage('')
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(form),
+      })
+
+      const payload: { error?: string } = await response.json().catch(() => ({}))
+
+      if (!response.ok) {
+        throw new Error(payload.error || 'Failed to send message.')
+      }
+
+      setForm({ name: '', email: '', message: '' })
+      setStatus('sent')
+    } catch (err) {
+      setStatus('error')
+      setErrorMessage(err instanceof Error ? err.message : 'Failed to send message.')
+    }
   }
 
   return (
@@ -30,17 +63,19 @@ export default function Contact() {
         </p>
 
         {status === 'sent' ? (
-          <p style={{ fontSize: 13, color: 'var(--muted)', paddingTop: '1rem' }}>
+          <p className="cf-status" aria-live="polite">
             ✓ Message sent — I&apos;ll be in touch soon!
           </p>
         ) : (
-          <div className="cf">
+          <form className="cf" onSubmit={handleSubmit}>
             <input
               type="text"
               name="name"
               placeholder="Your name"
               value={form.name}
               onChange={handleChange}
+              autoComplete="name"
+              required
             />
             <input
               type="email"
@@ -48,17 +83,25 @@ export default function Contact() {
               placeholder="Your email"
               value={form.email}
               onChange={handleChange}
+              autoComplete="email"
+              required
             />
             <textarea
               name="message"
               placeholder="Your message"
               value={form.message}
               onChange={handleChange}
+              required
             />
-            <button type="button" onClick={handleSubmit} disabled={status === 'sending'}>
+            <button type="submit" disabled={status === 'sending'}>
               {status === 'sending' ? 'Sending…' : 'Send message →'}
             </button>
-          </div>
+            {status === 'error' ? (
+              <p className="cf-status error" aria-live="assertive">
+                {errorMessage}
+              </p>
+            ) : null}
+          </form>
         )}
       </div>
 
