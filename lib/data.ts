@@ -13,7 +13,7 @@ export interface ExpertiseItem {
   desc: string
   tags?: TechTag[]
   subsections?: ExpertiseSubSection[]
-  wide?: boolean  // spans full row on desktop
+  wide?: boolean
 }
 
 export interface ExperienceItem {
@@ -204,8 +204,11 @@ export const moreProjects: ProjectItem[] = [
     image: "./projects/utPro.webp",
     demo: "https://utprocleaningservices.com.au",
     tags: [
-      { label: 'Flutter',  icon: d('flutter/flutter-original.svg') },
-      { label: 'Firebase', icon: d('firebase/firebase-original.svg') },
+      { label: 'React',      icon: d('react/react-original.svg') },
+      { label: 'Node.js',    icon: d('nodejs/nodejs-original.svg') },
+      { label: 'Express',  icon: d('express/express-original.svg') },
+      { label: 'Prisma',  icon: d('prisma/prisma-original.svg') },
+      { label: 'PostgreSQL', icon: d('postgresql/postgresql-original.svg') },
     ],
   },
   // {
