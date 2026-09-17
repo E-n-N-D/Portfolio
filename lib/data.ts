@@ -144,6 +144,23 @@ export const experience: ExperienceItem[] = [
 
 export const projects: ProjectItem[] = [
   {
+    name: 'Aimoogle | Browser Aim Trainer',
+    desc: 'Real-time browser aim trainer featuring 1v1 duels with live gameplay moderation. Utilizes WebSockets for real-time player game events, Redis caching, BullMQ queues, and an automated CI/CD pipeline via GitHub Actions.',
+    image: "./projects/aimoogle.webp",
+    demo: "https://aimoogle.app",
+    tags: [
+      { label: 'Next.js',        icon: d('nextjs/nextjs-original.svg') },
+      { label: 'NestJS',         icon: d('nestjs/nestjs-original.svg') },
+      { label: 'Supabase',       icon: d('supabase/supabase-original.svg') },
+      { label: 'Redis',          icon: d('redis/redis-original.svg') },
+      { label: 'WebSocket',      icon: d('socketio/socketio-original.svg') },
+      { label: 'BullMQ' },
+      { label: 'Azure',          icon: d('azure/azure-original.svg') },
+      { label: 'Cloudflare',     icon: d('cloudflare/cloudflare-original.svg') },
+      { label: 'GitHub Actions', icon: d('githubactions/githubactions-original.svg') },
+    ],
+  },
+  {
     name: 'RP Creator Group | Brand Website',
     desc: 'A service-based referral platform that connects users with verified professionals across multiple industries such as migration, legal, and real estate.',
     image: "./projects/rpCreatorGroup.webp",
@@ -169,6 +186,9 @@ export const projects: ProjectItem[] = [
       { label: 'REST API' },
     ],
   },
+]
+
+export const moreProjects: ProjectItem[] = [
   {
     name: 'Aveksha | Digital healthcare application',
     desc: 'A mobile application focusing on digitalizing the process of booking an appointment with healthcare professionals and organizing medical reports.',
@@ -182,9 +202,6 @@ export const projects: ProjectItem[] = [
       { label: 'MongoDB',  icon: d('mongodb/mongodb-original.svg') },
     ],
   },
-]
-
-export const moreProjects: ProjectItem[] = [
   {
     name: 'Pharma App',
     desc: 'A comprehensive web-based solution for managing medical inventory, tracking stock levels, and monitoring medicine expiry dates.',

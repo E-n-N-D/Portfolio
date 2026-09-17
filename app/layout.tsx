@@ -18,8 +18,8 @@ const hankenGrotesk = Hanken_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'Sushant — Portfolio',
-  description: 'Full Stack Developer · Backend Focus · AI Engineer',
+  title: 'Sushant | Portfolio',
+  description: 'Full Stack Developer · Backend Engineer (Focus)',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
