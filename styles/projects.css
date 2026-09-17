@@ -4,7 +4,7 @@
   gap: 1.25rem;
 }
 
-/* Main projects — always 3 equal columns filling full available width */
+/* Main projects: always 3 equal columns filling full available width */
 .projects-grid-main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

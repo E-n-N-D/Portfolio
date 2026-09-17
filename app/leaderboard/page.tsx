@@ -620,7 +620,7 @@ export default function LeaderboardPage() {
                           <td key={m.key} className="center medal-cell">
                             {p.medals[m.key] > 0
                               ? <>{m.icon} {p.medals[m.key]}</>
-                              : <span style={{ color: '#1e293b' }}>—</span>}
+                              : <span style={{ color: '#1e293b' }}>–</span>}
                           </td>
                         ))}
                         <td className="center total-cell">{calcTotal(p.medals)}</td>
@@ -640,12 +640,12 @@ export default function LeaderboardPage() {
                 {ungrouped.map((p) => (
                   <tr key={p._id} className="player-row">
                     <td><span className="player-name">{p.name}</span></td>
-                    <td><span style={{ color: '#475569', fontSize: '0.75rem' }}>—</span></td>
+                    <td><span style={{ color: '#475569', fontSize: '0.75rem' }}>–</span></td>
                     {MEDALS.map((m) => (
                       <td key={m.key} className="center medal-cell">
                         {p.medals[m.key] > 0
                           ? <>{m.icon} {p.medals[m.key]}</>
-                          : <span style={{ color: '#1e293b' }}>—</span>}
+                          : <span style={{ color: '#1e293b' }}>–</span>}
                       </td>
                     ))}
                     <td className="center total-cell">{calcTotal(p.medals)}</td>

@@ -11,14 +11,14 @@ export default function Projects() {
 
   return (
     <div>
-      {/* Main projects — always fills full width in 3 equal columns */}
+      {/* Main projects: always fills full width in 3 equal columns */}
       <div className="projects-grid-main">
         {projects.map((p, i) => (
           <ProjectCard key={p.name} project={p} dir={mainDirs[i] ?? 'from-bottom'} />
         ))}
       </div>
 
-      {/* Expanded more-projects — container animates in, cards don't need reveal */}
+      {/* Expanded more-projects: container animates in, cards don't need reveal */}
       {expanded && (
         <div className="projects-grid projects-grid-more">
           {moreProjects.map((p) => (

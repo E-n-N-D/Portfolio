@@ -29,12 +29,12 @@
 .tl-role   { font-family: var(--serif); font-size: 1.1rem; color: var(--text); margin-bottom: .15rem; font-weight: 400; }
 .tl-org    { font-size: 12px; color: var(--text-secondary); font-weight: 300; }
 
-/* Chevron — shown only in mobile/tablet via responsive overrides */
+/* Chevron: shown only in mobile/tablet via responsive overrides */
 .tl-chevron    { width: 18px; height: 18px; flex-shrink: 0; margin-left: 1rem; color: var(--dim); transition: transform .35s var(--ease), color .2s; }
 .tl-item.open .tl-chevron { transform: rotate(180deg); color: var(--muted); }
 .tl-chevron-sm { display: none; }
 
-/* Accordion body — shown only in mobile/tablet */
+/* Accordion body: shown only in mobile/tablet */
 .tl-body    { max-height: 0; overflow: hidden; transition: max-height .4s var(--ease); }
 .tl-body-sm { display: none; }
 .tl-body-inner { padding: .85rem 1.25rem 1.1rem; border-top: 0.5px solid var(--line); }
@@ -45,7 +45,7 @@
   font-size: 12px; color: var(--muted); font-weight: 300; line-height: 1.65;
   display: flex; gap: .6rem; align-items: flex-start;
 }
-.tl-bullets li::before { content: '—'; color: var(--dim); flex-shrink: 0; font-size: 11px; margin-top: 1px; }
+.tl-bullets li::before { content: '–'; color: var(--dim); flex-shrink: 0; font-size: 11px; margin-top: 1px; }
 
 /* ── TWO-PANEL LAYOUT (desktop) ── */
 .exp-layout {

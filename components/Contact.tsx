@@ -64,7 +64,7 @@ export default function Contact() {
 
         {status === 'sent' ? (
           <p className="cf-status" aria-live="polite">
-            ✓ Message sent — I&apos;ll be in touch soon!
+            ✓ Message sent. I&apos;ll be in touch soon!
           </p>
         ) : (
           <form className="cf" onSubmit={handleSubmit}>

@@ -5,7 +5,7 @@ export default function Hero() {
         <p className="hero-eyebrow reveal from-top d1">FULL STACK DEVELOPER · BACKEND FOCUS</p>
         <h1 className="hero-name reveal from-left d2">Sushant</h1>
         <p className="hero-tagline reveal from-left d3">
-          I build scalable backend systems and intelligent applications — turning complex problems
+          I build scalable backend systems and intelligent applications, turning complex problems
           into clean, working software.
         </p>
         <div className="hero-actions reveal from-bottom d4">

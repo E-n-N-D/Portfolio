@@ -31,7 +31,7 @@ export default function StickyLayout({ sections }: Props) {
     const root = scrollRoot.current
     if (!root) return
 
-    // Progress bar — how far through the whole content-wrapper
+    // Progress bar: how far through the whole content-wrapper
     const wrapper = wrapperRef.current
     if (wrapper) {
       const wRect = wrapper.getBoundingClientRect()
@@ -119,7 +119,7 @@ export default function StickyLayout({ sections }: Props) {
             className={`right-section ${sec.bg}`}
             ref={(el) => { sectionRefs.current[i] = el }}
           >
-            {/* Mobile-only inline heading — hidden on desktop via CSS */}
+            {/* Mobile-only inline heading: hidden on desktop via CSS */}
             <div className="mobile-section-head">
               <div className="left-num">{sec.num}</div>
               <p className="sec-label">{sec.label}</p>

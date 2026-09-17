@@ -1,5 +1,5 @@
 /* ── ENTRY POINT ──────────────────────────────────────────────────────────
-   All styles live in /styles/* — imported in dependency order.
+   All styles live in /styles/*: imported in dependency order.
    globals.css exists only as the Next.js App Router CSS entry point.
    ───────────────────────────────────────────────────────────────────────── */
 

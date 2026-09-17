@@ -24,7 +24,7 @@
   .exp-sub-col     { padding: 0; border-right: none; border-bottom: 0.5px solid var(--line); padding-bottom: .85rem; }
   .exp-sub-col:last-child { border-bottom: none; padding-bottom: 0; }
 
-  /* Experience — accordion on tablet */
+  /* Experience: accordion on tablet */
   .exp-layout        { grid-template-columns: 1fr; gap: 0; }
   .exp-detail        { display: none; }
   .exp-list .tl-item { opacity: 1; }
@@ -100,7 +100,7 @@
   .exp-sub-col     { padding: 0; border-right: none; border-bottom: 0.5px solid var(--line); padding-bottom: .85rem; }
   .exp-sub-col:last-child { border-bottom: none; padding-bottom: 0; }
 
-  /* Experience — accordion on mobile */
+  /* Experience: accordion on mobile */
   #experience.right-section { padding-top: calc(52px + 1rem); }
   .exp-layout        { grid-template-columns: 1fr; gap: 0; }
   .exp-detail        { display: none; }

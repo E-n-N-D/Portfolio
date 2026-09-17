@@ -51,7 +51,7 @@ export default function Experience() {
           const isRevealed  = revealed.has(i)
           const dir         = i % 2 === 0 ? 'from-right' : 'from-left'
 
-          // Large screen: no accordion — just highlight active
+          // Large screen: no accordion, just highlight active
           // Small screen: accordion behaviour
           const isAccordionOpen = openIdx === i
 
@@ -84,7 +84,7 @@ export default function Experience() {
                 </svg>
               </div>
 
-              {/* Accordion body — small screens only */}
+              {/* Accordion body: small screens only */}
               <div className="tl-body tl-body-sm" style={{ maxHeight: isAccordionOpen ? '400px' : '0' }}>
                 <div className="tl-body-inner">
                   <ul className="tl-bullets">

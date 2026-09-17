@@ -38,7 +38,7 @@ const d = (icon: string) =>
 export const expertise: ExpertiseItem[] = [
   {
     name: 'Web Development',
-    desc: 'End-to-end web systems — from pixel-perfect frontends to high-throughput APIs and the databases that power them.',
+    desc: 'End-to-end web systems, from pixel-perfect frontends to high-throughput APIs and the databases that power them.',
     wide: true,
     subsections: [
       {
@@ -76,7 +76,7 @@ export const expertise: ExpertiseItem[] = [
   },
   {
     name: 'Mobile App Development',
-    desc: 'Cross-platform apps that feel native — smooth UX, offline support, and tight backend integration.',
+    desc: 'Cross-platform apps that feel native, with smooth UX, offline support, and tight backend integration.',
     tags: [
       { label: 'Flutter',      icon: d('flutter/flutter-original.svg') },
       { label: 'React Native', icon: d('react/react-original.svg') },
@@ -86,7 +86,7 @@ export const expertise: ExpertiseItem[] = [
   },
   {
     name: 'UI Design & Prototyping',
-    desc: 'Interfaces that feel native to the platform and serve the user first — designed before a single line of code.',
+    desc: 'Interfaces that feel native to the platform and serve the user first, designed before a single line of code.',
     tags: [
       { label: 'Figma',        icon: d('figma/figma-original.svg') },
       { label: 'Canva',        icon: d('canva/canva-original.svg') },
@@ -95,7 +95,7 @@ export const expertise: ExpertiseItem[] = [
   },
   {
     name: 'Cloud, DevOps & Tools',
-    desc: 'Shipping software reliably — containerised deployments, CI pipelines, and cloud infrastructure.',
+    desc: 'Shipping software reliably through containerised deployments, CI pipelines, and cloud infrastructure.',
     tags: [
       { label: 'Docker',  icon: d('docker/docker-original.svg') },
       { label: 'Git',     icon: d('git/git-original.svg') },
@@ -135,7 +135,7 @@ export const experience: ExperienceItem[] = [
     org: 'Independent · Full Stack Development',
     bullets: [
       'Designed, built, and deployed full-stack web and mobile applications for clients across multiple industries.',
-      'Managed the full project lifecycle — requirements gathering, architecture, development, and delivery.',
+      'Managed the full project lifecycle, from requirements gathering and architecture to development and delivery.',
       'Built REST APIs, integrated third-party services, and maintained cloud infrastructure for client products.',
       'Maintained long-term client relationships through iterative delivery and reliable communication.',
     ],
